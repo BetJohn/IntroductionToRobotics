@@ -9,4 +9,4 @@ Homework 1
 
 Task1: Install Arduino IDE. [x]
 
-![This is the latest version of Arduino IDE] (C:\Users\Ioan\Desktop\Facultate_Anul_3\Robotica\Repo\IntroductionToRobotics\Arduino IDE - Photo.jpg)
+![This is the latest version of Arduino IDE] (https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
