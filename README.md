@@ -5,8 +5,12 @@ Introduction to Robotics (2023 - 2024)
 
 Starting from this point, you can see all the homeworks:
 
-Homework 1
+#Homework 0:
 
-Task1: Install Arduino IDE. [x]
+##Task1: Install Arduino IDE. - [x]
 
-![This is the latest version of Arduino IDE] (https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
+![This is the latest version of Arduino IDE](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
+
+
+#Homework 1: (Comming soon...)
+
