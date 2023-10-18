@@ -7,7 +7,7 @@ Starting from this point, you can see all the homeworks:
 
 # Homework 0:
 
-Task1: Install Arduino IDE. [x] You can download it from [here](https://www.arduino.cc/en/software) 
+Task1: Install Arduino IDE. :heavy_check_mark: You can download it from [here](https://www.arduino.cc/en/software) 
 
 ![This is the latest version of Arduino IDE](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
 
