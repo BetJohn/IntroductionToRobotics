@@ -19,9 +19,23 @@ Task1: Install Arduino IDE. :heavy_check_mark: You can download it from [here](h
 
 Task: Create a breadboard circuit with a LED which is adjusted by 3 potentiometers. :heavy_check_mark:
 
-### In this task I used: 3 potentioemeters, 1 RGB LED, 1 breadboard, 1 Arduino UNO, 1 USB cable, cables, and 3 resistors in order to make the circuit work.
-I have connected the 3 potentiometers to analog pins A0,A1 and A2. The RGB LED is connected to digital pins 9,10 and 11. The resistors are connected to every RGB pin.
+### In this task I used: 
+### 3 potentioemeters
+### 3 resistors
+### 1 RGB LED
+### 1 breadboard
+### 1 Arduino UNO
+### 1 USB cable
+### cables
+
+I have connected the 3 potentiometers to analog pins A0,A1 and A2. 
+
+The RGB LED is connected to digital pins 9,10 and 11. 
+
+The resistors are connected to every RGB pin.
+
+The RGB LED pins get the values from the potentiometers mapped from 0 to 255.
 
 This is the circuit setup
-![Sample](https://github.com/BetJohn/IntroductionToRobotics/issues/3#issue-1955511694)
-### The code for this task is in the file: [/Homework1/ledRGB.ino]
+![Sample](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB_Setup.jpg)
+### The code for this task is in the file: [https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB.ino]
