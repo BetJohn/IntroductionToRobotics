@@ -6,7 +6,7 @@ In this repository you can find all the projects and knowledge on a basic level 
 
 Introduction to Robotics (2023 - 2024)
 
-Starting from this point, you can see all the homeworks:
+Starting from this point, you can see all the homework:
 
 # Homework 0:
 
@@ -36,7 +36,7 @@ The resistors are connected to every RGB pin.
 
 The RGB LED pins get the values from the potentiometers mapped from 0 to 255.
 
-## This is the circuit setup
+## This is the circuit setup :bulb: :heavy_check_mark:
 ![Sample](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB_Setup.jpg)
 
-Code can be download [here](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB.ino)
+Code can be download [here](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB.c%2B%2B)
