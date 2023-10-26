@@ -54,4 +54,4 @@ The buzzer is used to make a sound when the elevator arrives at a floor.
 
 ### This is the circuit setup :elevator: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework2/Elevator_Setup.jpg)
 
-Link to Youtube [here](https://youtu.be/8dfyfAYmKs8)
+Link to Youtube [here](https://youtu.be/kmI19xoIzjw)

@@ -44,6 +44,15 @@ int currentLevelLED(){
     return ledPin2;
   return ledPin3;
 }
+byte getState(int pinLED){
+  if(pinLED == ledPin1){
+    return ledState1;
+  }
+  if(pinLED == ledPin2){
+    return ledState2;
+  }
+  return ledState3;
+}
 void switchLED(int pinLed){
   if (pinLed == 13){
     ledState3 = !ledState3;
@@ -54,10 +63,14 @@ void switchLED(int pinLed){
   else{
     ledState1 = !ledState1;
   }
+  digitalWrite(pinLed,!getState(pinLed));
 }
 unsigned int  lastBlink;
 const int maxBlinks = 10; 
-void elevatorLight(){
+void elevatorLight(int startPin,bool lightMiddleLED){
+  if(lightMiddleLED){
+    switchLED(ledPin2);
+  }
   for(int nrBlinks = 0; nrBlinks < maxBlinks;){
     unsigned int currentMillis = millis();
     if(currentMillis-lastBlink > blinkInterval){
@@ -66,6 +79,9 @@ void elevatorLight(){
       lastBlink = currentMillis;
       nrBlinks++;
     }
+  }
+  if(lightMiddleLED){
+    switchLED(ledPin2);
   }
 }
 unsigned int lastBuzz = 0;
@@ -85,6 +101,14 @@ void beep(){
     }
   noTone(pinBuzzer);
 }
+bool neighbours(int ledStart, int ledStop){
+  if(ledStart == 13 || ledStart == 11){
+    if(ledStop == 11 || ledStop == 13){
+      return false;
+    }
+  }
+  return true;
+}
 const int setupTime = 4000;
 void debounce(int buttonPin, int ledPin, byte& buttonState, byte& ledState, byte& lastReading, unsigned int& lastDebounceTime) {
   int currentReading = digitalRead(buttonPin);
@@ -99,7 +123,16 @@ void debounce(int buttonPin, int ledPin, byte& buttonState, byte& ledState, byte
         Serial.print("Lit LED:");
         Serial.println(currentLitLED);
         if(currentLitLED!= ledPin){
-          elevatorLight();
+
+          if(neighbours(currentLitLED, ledPin) == false){
+            //level2 need to be lit
+            elevatorLight(ledPin,true);
+            Serial.print(currentLitLED);
+            Serial.print(" and ");
+            Serial.print(ledPin);
+            Serial.println(" are not neighbours! ");
+          }
+          elevatorLight(ledPin,false);
           Serial.print("It`s calling the led:");
           Serial.println(ledPin);
           switchLED(currentLitLED);
@@ -116,7 +149,7 @@ void debounce(int buttonPin, int ledPin, byte& buttonState, byte& ledState, byte
   lastReading = currentReading;
 }
 void loop() {
+  debounce(buttonPin1, ledPin1, buttonState1, ledState1, lastReading1, lastDebounceTime1);
   debounce(buttonPin2, ledPin2, buttonState2, ledState2, lastReading2, lastDebounceTime2);
   debounce(buttonPin3, ledPin3, buttonState3, ledState3, lastReading3, lastDebounceTime3);
-  debounce(buttonPin1, ledPin1, buttonState1, ledState1, lastReading1, lastDebounceTime1);
 }
