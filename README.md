@@ -12,7 +12,7 @@ Starting from this point, you can see all the homework:
 
 Task1: Install Arduino IDE. :heavy_check_mark: You can download it from [here](https://www.arduino.cc/en/software) 
 
-![This is the latest version of Arduino IDE](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
+[This is the latest version of Arduino IDE](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Arduino%20IDE%20-%20Photo.jpg)
 
 
 ## Homework 1: RGB LED :bulb:
@@ -30,13 +30,9 @@ The resistors are connected to every RGB pin.
 
 The RGB LED pins get the values from the potentiometers mapped from 0 to 255.
 
-### This is the circuit setup :bulb: :heavy_check_mark: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB_Setup.jpg)
+### This is the circuit setup :bulb: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB_Setup.jpg)
 
 Code can be download [here](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework1/ledRGB.c%2B%2B)
-
-
-
-
 
 
 ## Homework 2: Elevator simulator :elevator: 
@@ -56,6 +52,6 @@ The LEDs are used to show the current floor and the blinking LED is used to show
 
 The buzzer is used to make a sound when the elevator arrives at a floor.
 
-### This is the circuit setup :heavy_check_mark: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework2/Elevator_Setup.jpg)
+### This is the circuit setup :elevator: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework2/Elevator_Setup.jpg)
 
 Link to Youtube [here](https://youtu.be/8dfyfAYmKs8)
