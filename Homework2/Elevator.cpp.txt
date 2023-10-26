@@ -1,0 +1,122 @@
+const int buttonPin1 = 2;
+const int buttonPin2 = 3;
+const int buttonPin3 = 4;
+const int elevatorPin = 7;
+const int ledPin1 = 11;
+const int ledPin2 = 12;
+const int ledPin3 = 13;
+const int pinBuzzer = 5;
+int currentReading1;
+int currentReading2;
+int currentReading3;
+byte buttonState1 = LOW;
+byte buttonState2 = LOW;
+byte buttonState3 = LOW;
+byte elevatorLedState = HIGH;
+byte ledState1 = HIGH;
+byte ledState2 = LOW;
+byte ledState3 = LOW;
+int buttonPushCounter1 = 0;
+byte lastReading1 = LOW;
+byte lastReading2 = LOW;
+byte lastReading3 = LOW;
+unsigned int lastDebounceTime1 = 0;
+unsigned int lastDebounceTime2 = 0;
+unsigned int lastDebounceTime3 = 0;
+unsigned int blinkInterval = 130;
+unsigned int debounceDelay = 50;
+
+void setup() {
+  pinMode(buttonPin1, INPUT_PULLUP);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(buttonPin2, INPUT_PULLUP);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(buttonPin3, INPUT_PULLUP);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(elevatorPin,OUTPUT);
+  pinMode(pinBuzzer, OUTPUT);
+  Serial.begin(9600);
+}
+int currentLevelLED(){
+  if(ledState1 == HIGH)
+    return ledPin1;
+  if(ledState2 == HIGH)
+    return ledPin2;
+  return ledPin3;
+}
+void switchLED(int pinLed){
+  if (pinLed == 13){
+    ledState3 = !ledState3;
+  }
+  else if (pinLed == 12){
+    ledState2 = !ledState2;
+  }
+  else{
+    ledState1 = !ledState1;
+  }
+}
+unsigned int  lastBlink;
+const int maxBlinks = 10; 
+void elevatorLight(){
+  for(int nrBlinks = 0; nrBlinks < maxBlinks;){
+    unsigned int currentMillis = millis();
+    if(currentMillis-lastBlink > blinkInterval){
+      digitalWrite(elevatorPin,elevatorLedState);
+      elevatorLedState = !elevatorLedState;
+      lastBlink = currentMillis;
+      nrBlinks++;
+    }
+  }
+}
+unsigned int lastBuzz = 0;
+const int buzzInterval = 100;
+const int maxBuzzIntervals = 2;
+const int buzzerFrequency = 2000;
+void beep(){
+  tone(pinBuzzer,buzzerFrequency);
+  bool ringing = true;
+  for(int nrBuzzes = 0; nrBuzzes < maxBuzzIntervals;){
+    unsigned int currentMillis = millis();
+    if(currentMillis-lastBuzz > buzzInterval){
+      // Serial.println(lastBuzz);
+      lastBuzz = currentMillis;
+      nrBuzzes ++;
+      }
+    }
+  noTone(pinBuzzer);
+}
+const int setupTime = 4000;
+void debounce(int buttonPin, int ledPin, byte& buttonState, byte& ledState, byte& lastReading, unsigned int& lastDebounceTime) {
+  int currentReading = digitalRead(buttonPin);
+  if (currentReading != lastReading) {
+    lastDebounceTime = millis();
+  }
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (currentReading != buttonState) {
+      buttonState = currentReading;
+      if (buttonState == HIGH) {
+        int currentLitLED = currentLevelLED();
+        Serial.print("Lit LED:");
+        Serial.println(currentLitLED);
+        if(currentLitLED!= ledPin){
+          elevatorLight();
+          Serial.print("It`s calling the led:");
+          Serial.println(ledPin);
+          switchLED(currentLitLED);
+          ledState = !ledState;
+          if(lastDebounceTime > setupTime){
+          beep();
+          beep();
+          }
+        }
+      }
+    }
+  }
+  digitalWrite(ledPin, ledState);
+  lastReading = currentReading;
+}
+void loop() {
+  debounce(buttonPin2, ledPin2, buttonState2, ledState2, lastReading2, lastDebounceTime2);
+  debounce(buttonPin3, ledPin3, buttonState3, ledState3, lastReading3, lastDebounceTime3);
+  debounce(buttonPin1, ledPin1, buttonState1, ledState1, lastReading1, lastDebounceTime1);
+}
