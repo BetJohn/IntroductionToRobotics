@@ -55,3 +55,20 @@ The buzzer is used to make a sound when the elevator arrives at a floor.
 ### This is the circuit setup :elevator: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework2/Elevator_Setup.jpg)
 
 Link to Youtube [here](https://youtu.be/kmI19xoIzjw)
+
+## Homework 3: Seven Segment Display :1234: 
+
+Task: Create a breadboard circuit with a Seven Segment Display which is controlled by 1 joystick.
+
+### Materials used:
+### 1 Joystick, 1 Seven Segment Display, 1 Breadboard, 1 Arduino UNO, 1 USB cable, 8 resistors and many cables
+
+I have connected the 8 pins to digital pins 4,5,6,7,8,9,10 and 12
+
+The joystick is connected to analog pins A0, A1 and A2 - for the X, Y and button.
+
+The resistors are connected to every pin of the Seven Segment Display.
+
+The Seven Segment Display move the light depending on the position of the joystick.
+
+Link to Youtube [here](https://www.youtube.com/watch?v=p0jv8QHuTU0&ab_channel=IoanBenescu)
