@@ -72,3 +72,22 @@ The resistors are connected to every pin of the Seven Segment Display.
 The Seven Segment Display move the light depending on the position of the joystick.
 
 Link to Youtube [here](https://www.youtube.com/watch?v=p0jv8QHuTU0&ab_channel=IoanBenescu)
+
+## Homework 5: Serial Communication in Arduino Uno :computer: 
+
+### Materials used:
+### 1 Arduino UNO, 1 USB cable, 1 Breadboard, 1 RGB LED, 1 Photoresistor, 1 Ultrasonic Sensor, 5 resistos and many cables
+
+I have connected the RGB LED to digital pins.
+
+The photoresistor is connected to analog pin A0.
+
+The ultrasonic sensor is connected to digital pins 2 and 3.
+
+The resistors are connected to every RGB pin.
+
+The RGB LED changes the color depending on the light intensity or the distance from the ultrasonic sensor.
+
+The project is controlled by the serial monitor in Arduino IDE.
+
+Link to Youtube [here](https://youtu.be/C5rDWU4X4Ek)
