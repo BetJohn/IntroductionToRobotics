@@ -91,3 +91,24 @@ The RGB LED changes the color depending on the light intensity or the distance f
 The project is controlled by the serial monitor in Arduino IDE.
 
 Link to Youtube [here](https://youtu.be/C5rDWU4X4Ek)
+
+## Homework 6: Bomberman Game :bomb:
+
+### Materials used:
+### 1 Arduino UNO, 1 USB cable, 2 Breadboards, 1 Matrix LED, 1 Joystick, 1 Buzzer, 1 Shift Register, 2 Capacitors, 1 10k Ohm Resistor and many cables
+
+I have connected the joystick to analog pins A0, A1 and A2.
+
+The Matrix Led is controled by the shift register.
+
+The buzzer is connected to digital pin 5.
+
+The capacitors are connected to the shift register.
+
+The 10k Ohm resistor is connected to the shift register.
+
+The project is a game where you have to plant bombs and destroy all the walls.
+
+Game is over when you are hit by a bomb or you destroy all the walls.
+
+Link to Youtube [here](https://youtu.be/GfAONn3tBfs)
