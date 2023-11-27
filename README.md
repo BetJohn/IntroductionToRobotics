@@ -111,4 +111,6 @@ The project is a game where you have to plant bombs and destroy all the walls.
 
 Game is over when you are hit by a bomb or you destroy all the walls.
 
+Setup: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework6/Setup.jpg)
+
 Link to Youtube [here](https://youtu.be/GfAONn3tBfs)
