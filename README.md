@@ -114,3 +114,28 @@ Game is over when you are hit by a bomb or you destroy all the walls.
 Setup: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework6/Setup.jpg)
 
 Link to Youtube [here](https://youtu.be/GfAONn3tBfs)
+
+
+## Homework 7: Matrix game on 8x8 LED Matrix & LCD Display - Alpha phase :video_game: 
+
+
+### Materials used:
+### 1 Arduino UNO, 1 USB cable, 2 Breadboards, 1 Matrix LED, 1 Joystick, 1 Buzzer, 1 Shift Register, 2 Capacitors, 1 10k Ohm Resistor,Liquid Crystal Display and many cables
+
+I have connected the joystick to analog pins A0, A1 and A2.
+
+The Matrix Led is controled by the shift register.
+
+The capacitors are connected to the shift register.
+
+The 10k Ohm resistor is connected to the shift register.
+
+The LCD Display is connected to digital pins 12, 11, 5, 4, 3, 2.
+
+The project is a game where you have to clear the walls with bombs.
+
+You can start the game by pressing the joystick button and navigate with the joystick.
+
+Game is over when you are hit by a bomb or you destroy all the walls.
+
+Setup: [Photo](https://github.com/BetJohn/IntroductionToRobotics/blob/main/Homework7/Setup.jpg)
